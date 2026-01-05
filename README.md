@@ -1,6 +1,6 @@
 # Crash & Error Analysis Tool
 
-A lightweight Python CLI tool for analyzing program crash output and extracting meaningful error information from logs and Python tracebacks
+A lightweight Python CLI tool for analyzing program crash output and extracting meaningful error information from logs and Python tracebacks.
 
 ---
 
@@ -24,27 +24,29 @@ This tool reads error output (such as stderr or log files) and identifies the mo
 
 Analyze an error log file:
 
----
+```bash
+python analyzer.py error.txt
+```
 
-## Example
+## Example Output
+```bash
+$ python analyzer.py error.txt
 
-Input:
-ZeroDivisionError: division by zero
-
-Output:
 Detected error:
 Type    : ZeroDivisionError
 Message : division by zero
 Line    : None
+```
 
 ---
 
-## Project Structure
-
-analyzer.py        # Core parsing logic and CLI
-test_analyzer.py   # Unit and integration tests
-crash.py           # Sample crashing program used for testing
-
+## Project Structure      
+```
+├── analyzer.py  # Core parsing logic and CLI
+├── crash.py # Sample crashing program used for testing
+├── error.txt
+└── test_analyzer.py # Unit and integration tests
+```
 ---
 
 ## Motivation
